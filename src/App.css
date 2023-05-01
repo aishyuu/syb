@@ -6,4 +6,8 @@
   background: linear-gradient(131deg, rgb(50, 5, 62) 12%, rgb(57, 3, 92) 65%, rgb(75, 1, 125) 100%);
 }
 
-/*# sourceMappingURL=App.css.map */
+.banner-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}/*# sourceMappingURL=App.css.map */

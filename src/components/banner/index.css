@@ -1,0 +1,14 @@
+.banner-main {
+  width: 80%;
+  height: 12rem;
+  background-color: white;
+  display: flex;
+  border-radius: 0.5rem;
+}
+
+.banner-test-content {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}/*# sourceMappingURL=index.css.map */

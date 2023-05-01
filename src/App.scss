@@ -6,3 +6,9 @@
     background: rgb(50,5,62);
     background: linear-gradient(131deg, rgba(50,5,62,1) 12%, rgba(57,3,92,1) 65%, rgba(75,1,125,1) 100%); 
 }
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
