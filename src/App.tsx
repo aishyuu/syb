@@ -1,48 +1,35 @@
-import "./App.css";
-import Header from "./components/header";
-import Banner from "./components/banner";
-import { useEffect, useState } from "react";
-
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
-  const [data, setData] = useState({ product: [], deal: [], banner: [] });
-
-  const PROJECT_ID = "lwzct5bl";
-  const DATASET = "production";
-  const QUERY = encodeURIComponent('*[_type in ["product", "deal", "banner"]]');
-
-  const url = `https://${PROJECT_ID}.api.sanity.io/v2023-05-01/data/query/${DATASET}?query=${QUERY}`;
-
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result["result"]);
-        const productData = result["result"].filter((isProduct: any) => {
-          return isProduct["_type"] == "product";
-        });
-
-        const dealData = result["result"].filter((isDeal: any) => {
-          return isDeal["_type"] == "deal";
-        });
-
-        const bannerData = result["result"].filter((isBanner: any) => {
-          return isBanner["_type"] == "banner";
-        });
-
-        setData({ product: productData, deal: dealData, banner: bannerData });
-        console.log(data);
-      });
-  }, []);
+  const [count, setCount] = useState(0)
 
   return (
-    <div className="homepage-main">
-      <Header />
-      <div className="banner-container">
-        <Banner bannerData={data["banner"]} dealData={data["deal"]} />
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
-    </div>
-  );
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App
