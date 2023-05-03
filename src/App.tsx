@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Banner from "./components/banner";
 import { useEffect, useState } from "react";
 
+
 function App() {
   const [data, setData] = useState({ product: [], deal: [], banner: [] });
 
@@ -17,7 +18,6 @@ function App() {
       .then((res) => res.json())
       .then((result) => {
         console.log(result["result"]);
-        // const productData = result['result'].filter((isProduct : object) => {isProduct['_type'] == })
         const productData = result["result"].filter((isProduct: any) => {
           return isProduct["_type"] == "product";
         });
@@ -39,7 +39,7 @@ function App() {
     <div className="homepage-main">
       <Header />
       <div className="banner-container">
-        <Banner bannerData={data["banner"]} />
+        <Banner bannerData={data["banner"]} dealData={data["deal"]} />
       </div>
     </div>
   );
