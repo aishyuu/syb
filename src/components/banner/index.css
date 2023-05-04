@@ -3,26 +3,38 @@
   height: 16rem;
   display: flex;
   border-radius: 0.5rem;
-}
-
-.banner-img {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
+  margin: 4rem auto 0 auto;
   border-radius: 0.3rem;
 }
 
-.carousel-test {
-  height: 100%;
-  width: 100%;
+.banner-img {
+  min-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.3rem;
 }
 
 .card-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   height: 100%;
   width: 100%;
-  z-index: 2;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.card-text-container {
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card-text-header {
+  font-size: 3rem;
+}
+
+.card-text-subheader {
+  padding-left: 1rem;
 }/*# sourceMappingURL=index.css.map */

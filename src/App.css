@@ -10830,4 +10830,8 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  background-color: white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=App.css.map */

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Product from "./pages/Product.tsx";
+import Product from "./pages/Product/index.tsx";
+import Deal from "./pages/Deal/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/product/:slug",
     element: <Product />
+  },
+  {
+    path: "/deal/:slug",
+    element: <Deal />
   }
 ])
 
