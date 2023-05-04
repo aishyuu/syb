@@ -36,5 +36,14 @@
 }
 
 .card-text-subheader {
-    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.card-subsection {
+    display: flex;
+    align-items: center;
+}
+
+.card-link {
+    text-decoration: none;
 }

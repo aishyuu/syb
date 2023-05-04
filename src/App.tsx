@@ -34,6 +34,9 @@ function App() {
       <div>
         {data["deal"][0] ? <Banner bannerInfo={data["deal"][0]} /> : "No Data in here"}
       </div>
+      <div>
+        {}
+      </div>
     </div>
   );
 }
