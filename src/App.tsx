@@ -2,9 +2,10 @@ import "./App.css";
 import Header from "./components/header";
 import Banner from "./components/banner";
 import { useEffect, useState } from "react";
+import BestSellers from "./components/bestSellers";
 
 function App() {
-  const [data, setData] = useState({ product: [], deal: [] });
+  const [data, setData] = useState({ product: [], deal: [], mostPopular: [] });
 
   const PROJECT_ID = "lwzct5bl";
   const DATASET = "production";
@@ -20,11 +21,16 @@ function App() {
           return isProduct["_type"] == "product";
         });
 
+        const popularData = productData.filter((isPopular: any) => {
+          return isPopular["is_popular"] == true;
+        })
+
         const dealData = result["result"].filter((isDeal: any) => {
           return isDeal["_type"] == "deal";
         });
 
-        setData({ product: productData, deal: dealData });
+        setData({ product: productData, deal: dealData, mostPopular: popularData });
+        console.log(data);
       });
   }, []);
 
@@ -32,10 +38,19 @@ function App() {
     <div className="homepage-main">
       <Header />
       <div>
-        {data["deal"][0] ? <Banner bannerInfo={data["deal"][0]} /> : "No Data in here"}
+        {data["deal"][0] ? (
+          <Banner bannerInfo={data["deal"][0]} />
+        ) : (
+          "No Data in here"
+        )}
       </div>
       <div>
-        {}
+        <h1 className="most-popular-text">Most Popular</h1>
+        {data["product"][0] ? (
+          <BestSellers productData={data["mostPopular"]} />
+        ) : (
+          <h1>There is no Data here!</h1>
+        )}
       </div>
     </div>
   );

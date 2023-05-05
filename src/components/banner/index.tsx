@@ -7,8 +7,6 @@ export default function Banner(props: any) {
 
   useEffect(() => {
     setBannerInfo(props["bannerInfo"]);
-    console.log(bannerInfo);
-    console.log(bannerInfo["banner_image"]);
   }, [props]);
   return (
     <div className="banner-main">

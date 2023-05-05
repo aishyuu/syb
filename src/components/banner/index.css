@@ -1,9 +1,9 @@
 .banner-main {
-  width: 80%;
-  height: 16rem;
+  width: 100%;
+  height: 24rem;
   display: flex;
   border-radius: 0.5rem;
-  margin: 4rem auto 0 auto;
+  margin: 0 auto;
   border-radius: 0.3rem;
 }
 

@@ -10829,9 +10829,12 @@ textarea.form-control-lg {
 .banner-container {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
   background-color: white;
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.most-popular-text {
+  padding: 2rem;
+  color: white;
 }/*# sourceMappingURL=App.css.map */

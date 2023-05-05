@@ -1,0 +1,58 @@
+.card-wrapper {
+  width: 16.2rem;
+  height: 20.2rem;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 223, 94));
+  border-radius: 0.5rem;
+  text-decoration: none;
+  &:hover {
+    animation: bounce 900ms ease-in-out forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    box-shadow: 5px 10px 30px #1e1e1e;
+  }
+}
+
+.card-container {
+  width: 16rem;
+  height: 20rem;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  border-radius: 0.3rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  
+}
+
+.card-image-container {
+  width: 12rem;
+  height: 12rem;
+}
+
+.card-image {
+  width: 12rem;
+  height: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-information {
+  margin-top: 8px;
+  margin-bottom: -8px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
