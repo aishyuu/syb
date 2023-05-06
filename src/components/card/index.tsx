@@ -13,8 +13,8 @@ export default function Card(props) {
           className="card-image"
         />
         <div className="card-information">
-          <h5>{props["item"]["name"]}</h5>
-          <p>{props["item"]["short_description"]}</p>
+          <h6>{props["item"]["name"]}</h6>
+          <p className="card-short-description">{props["item"]["short_description"]}</p>
         </div>
         <div className="card-pricing">
             {props["item"]["on_sale"] == true ? <p></p> : <h3 className="price-normal">{`$${props["item"]["price"]}.00`}</h3>}

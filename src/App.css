@@ -10820,10 +10820,10 @@ textarea.form-control-lg {
   }
 }
 .homepage-main {
-  height: 100vh;
+  height: 300vh;
   font-family: "Lato", sans-serif;
-  background: rgb(50, 5, 62);
-  background: linear-gradient(131deg, rgb(50, 5, 62) 12%, rgb(57, 3, 92) 65%, rgb(75, 1, 125) 100%);
+  background: white;
+  color: #2D132C;
 }
 
 .banner-container {
@@ -10836,5 +10836,4 @@ textarea.form-control-lg {
 
 .most-popular-text {
   padding: 2rem;
-  color: white;
 }/*# sourceMappingURL=App.css.map */

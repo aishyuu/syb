@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 .homepage-header {
-    color: white;
     display: flex;
     background: rgb(17,40,89);
-    background: linear-gradient(131deg, rgba(17,40,89,1) 12%, rgba(8,44,92,1) 65%, rgba(1,7,125,1) 100%); 
+    background-image: linear-gradient(to bottom, #ffd700, #cda500);
     padding: 16px;
 }
 
 .homepage-header-facebook {
     display: flex;
     align-items: center;
-    color: white;
+    color: #2D132C;
     text-decoration: none;
 
     &:hover{
         text-decoration: underline;
-        color: rgb(192, 196, 255)
+        color: #1877F2;
     }
 }
 
@@ -25,10 +24,10 @@
     margin-left: auto;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: #2D132C;
 
     &:hover {
         text-decoration: underline;
-        color: rgb(164, 255, 164)
+        color: #0ea345;
     }
 }
